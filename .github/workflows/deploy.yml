@@ -32,7 +32,6 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           IMAGE_NAME="gcr.io/${{ secrets.GCP_PROJECT_ID }}/tracking"
-          cd tracking_nutrition_baby_api
           docker build -t $IMAGE_NAME:latest .
           docker push $IMAGE_NAME:latest
 
